@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Botão para Adicionar Mensagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #mensagens {
+            margin-top: 20px;
+        }
+        .mensagem {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #botao-adicionar {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #botao-adicionar:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página com Botão para Adicionar Mensagem</h1>
+    <button id="botao-adicionar">Adicionar Mensagem</button>
+    <div id="mensagens"></div>
+
+    <script>
+        document.getElementById('botao-adicionar').addEventListener('click', function() {
+            // Cria um novo elemento de mensagem
+            var novaMensagem = document.createElement('div');
+            novaMensagem.className = 'mensagem';
+            novaMensagem.innerText = 'Esta é uma nova mensagem!';
+
+            // Adiciona a nova mensagem ao div de mensagens
+            document.getElementById('mensagens').appendChild(novaMensagem);
+        });
+    </script>
+</body>
+</html>
